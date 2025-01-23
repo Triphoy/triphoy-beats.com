@@ -1,0 +1,692 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1A1A1A;
+    overflow: ф;
+    position: relative;
+    
+}
+
+
+
+.floating-ball {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(63, 63, 63, 0.8), transparent);
+    animation: float 10s infinite ease-in-out;
+    pointer-events: none;
+}
+
+.floating-ball:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 20%;
+    animation-duration: 12s;
+}
+
+
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    80% {
+        transform: translate(30px, 50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2F2F2F;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: top 0.3s ease; /* Плавное перемещение */
+    margin-top: 30px;
+}
+
+
+
+.logo {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Navigation */
+.site-header-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.links {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Sign-Up Button */
+.sign-up {
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #464545;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sign-up:hover {
+    background-color: #464545;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.burger-icon {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-header-nav {
+        display: none;
+        flex-direction: column;
+        background-color: #2F2F2F;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .site-header-nav.show {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .sign-up {
+        display: none;
+    }
+}
+
+/* Main Section */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 200px auto 0;
+}
+
+h1 {
+    color: #90C842;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+p {
+    color: #A7A7A7;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-style: light;
+    margin-top: 20px;
+}
+
+/* End Button */
+.end-button {
+    background: linear-gradient(to right, #90C842, #466220);
+    color: #000000;
+    border: none;
+    padding: 20px 100px;
+    border-radius: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 800;
+    margin-top: 50px;
+}
+
+.end-button:hover {
+    background: linear-gradient(to right, #76A936, #3B4F1C);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 32px;
+    }
+
+    .end-button {
+        padding: 15px 80px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    .end-button {
+        padding: 10px 60px;
+        font-size: 20px;
+    }
+}
+
+.elite-cards {
+    background-color: #121212;
+    padding: 50px 20px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 280px;
+    max-width: 1200px; /* Ограничиваем ширину всего контейнера */
+    margin-left: auto; /* Выравнивание по центру */
+    margin-bottom: 100px;
+    margin-right: auto; /* Выравнивание по центру */
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет перенос карточек */
+    gap: 20px; /* Расстояние между карточками */
+    justify-content: center; /* Центрирование всех карточек */
+}
+
+/* Обычные стили для десктопов и более широких экранов */
+.card {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px; /* Ширина карточки */
+    min-height: 350px; /* Минимальная высота для карточки */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 1 calc(33.333% - 20px); /* Каждая карточка занимает треть ширины с учетом отступов */
+    display: flex;
+    flex-direction: column; /* Все элементы в карточке идут по колонке */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+.card-image {
+    height: 60%; /* Высота изображения */
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1; /* Контент будет занимать оставшееся пространство */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Размещаем элементы по вертикали */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #bbbbbb;
+}
+
+.card-button {
+    background-color: #e63946;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Кнопка всегда прижата к низу */
+}
+
+.card-button:hover {
+    background-color: #d62839;
+}
+
+/* Медиазапрос для экранов до 400px */
+@media screen and (max-width: 400px) {
+    .cards-container {
+        flex-direction: column; /* Карточки будут в колонке */
+        gap: 10px; /* Уменьшаем расстояние между карточками */
+    }
+
+    .card {
+        width: 100%; /* Каждая карточка будет занимать всю ширину */
+        height: 300px; /* Карточки останутся квадратными */
+        min-height: 300px; /* Минимальная высота для карточки на мобильных */
+    }
+
+    .section-title {
+        font-size: 1.5rem; /* Уменьшаем размер шрифта заголовка */
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        font-size: 1.2rem; /* Уменьшаем размер шрифта заголовка карточки */
+    }
+
+    .card-description {
+        font-size: 0.9rem; /* Уменьшаем размер шрифта описания */
+        margin-bottom: 5px; /* Уменьшаем расстояние между описанием и кнопкой */
+    }
+
+    .card-button {
+        font-size: 0.9rem; /* Уменьшаем размер шрифта кнопки */
+        padding: 8px 16px; /* Уменьшаем padding для кнопки */
+        margin-top: 5px; /* Уменьшаем расстояние от описания до кнопки */
+    }
+}
+
+
+        .about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #2F2F2F, #1A1A1A);
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+            animation: spin 20s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+        }
+
+        .about-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #90C842;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-text {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #A7A7A7;
+        }
+
+        .about-highlight {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .skills-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .skill-card {
+            background: #2F2F2F;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.9);
+        }
+
+        .skill-title {
+            font-size: 1.2rem;
+            color: #90C842;
+            margin-bottom: 10px;
+        }
+
+        .skill-progress {
+            background: #464545;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            height: 20px;
+            margin-top: 10px;
+        }
+
+        .progress-bar {
+            background: #90C842;
+            height: 100%;
+            width: 0%;
+            animation: grow 2s ease-out forwards;
+        }
+
+        @keyframes grow {
+            from {
+                width: 0%;
+            }
+            to {
+                width: var(--progress);
+            }
+        }
+/* Настройка Canvas */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Канвас не мешает взаимодействию с контентом */
+  }
+
+
+ 
+
+/* Style for the experience section */
+.experience-section {
+    position: relative;
+    height: 100vh;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Стили для секции "Interactive Beats Showcase" */
+.interactive-showcase {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #222, #111);
+}
+
+.showcase-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #bbb;
+}
+
+.beats-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.beat-card {
+    position: relative;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.beat-card:hover {
+    transform: scale(1.05);
+}
+
+.beat-image {
+    background-size: cover;
+    background-position: center;
+    height: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.beat-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.beat-title {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.beat-description {
+    font-size: 16px;
+    color: #bbb;
+}
+
+/* Стили для кнопок */
+.cta-button {
+    margin-top: 40px;
+    background-color: #e91e63;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c2185b;
+}
+
+
+
+
+/* Основной стиль футера */
+.gothic-footer {
+    background: linear-gradient(145deg, #0a0a0a, #202020);
+    color: #e91e63;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Cinzel', serif; /* Используем шрифт с готическим эффектом */
+    position: relative;
+    overflow: hidden;
+    border-top: 5px solid #e91e63;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Заголовок футера */
+.gothic-footer h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: "Inter", serif;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ff4081;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    animation: pulse 3s infinite;
+}
+
+/* Анимация "пульсации" */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    }
+    50% {
+        transform: scale(1.05);
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    }
+}
+
+/* Навигация */
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.footer-nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.footer-nav ul li a {
+    color: #e91e63;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Cinzel', serif;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #ff80ab;
+    text-shadow: 0 3px 6px rgba(255, 0, 119, 0.8);
+}
+
+/* Социальные иконки */
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #e91e63;
+    font-size: 28px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ff4081;
+    transform: scale(1.3) rotate(15deg);
+}
+
+/* Нижняя строка футера */
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #aaa;
+    font-family: 'Cinzel', serif;
+    margin: 0;
+}
+
+/* Добавление эффекта всплывающего дыма */
+.gothic-footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: url('https://images.unsplash.com/photo-1549546505-8fb8f49d031e?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+    background-size: cover;
+    opacity: 0.05;
+    transform: translateX(-50%) scale(1.2);
+    animation: smoke-move 10s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes smoke-move {
+    0% {
+        transform: translateX(-50%) scale(1.2);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.5);
+    }
+    100% {
+        transform: translateX(-50%) scale(1.2);
+    }
+}

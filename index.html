@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripHoy Beats</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Подключаем шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Подключаем библиотеки -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollmagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollmagic/2.0.7/plugins/animation.gsap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@2.0.0/dist/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <div class="floating-ball"></div>
+  
+    <div class="container">
+        <header>
+            <h1 class="logo">TRIPHOY</h1>
+            <nav class="site-header-nav" id="nav-menu">
+                <a href="index3.html" class="links">Home</a>
+                <a href="#" class="links">Beats</a>
+                <a href="makerevievs.html" class="links">Lease</a>
+                <a href="index4.html" class="links">Contacts</a>
+            </nav>
+            <button class="sign-up" aria-label="Sign Up">Sign Up</button>
+            <div class="burger-menu" id="burger-menu" aria-label="Toggle navigation">
+                <span class="burger-icon"></span>
+                <span class="burger-icon"></span>
+                <span class="burger-icon"></span>
+            </div>
+        </header>
+
+        <script>
+            document.addEventListener("scroll", () => {
+                const header = document.querySelector("header");
+                const scrollPosition = window.scrollY;
+                
+                if (scrollPosition > 100) {
+                    header.style.top = "90%";
+                } else {
+                    header.style.top = "0";
+                }
+            });
+        </script>
+
+        <section class="main-container">
+            <h1>LANDING PAGE FROM STOKE 2018</h1>
+            <h2>Best beatmaker for genre assortment types</h2>
+            <p>We create high-level beats for your tracks with 100% royalty-free sound at low prices.</p>
+            <button class="end-button" aria-label="Start Work">START WORK</button>
+        </section>
+
+        <section class="elite-cards">
+            <h2 class="section-title">Our Exclusive Beats</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-image" style="background-image: url('lil\ o\ iFlex.jpg');"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Dark Symphony</h3>
+                        <p class="card-description">An intense and atmospheric beat with deep basslines and orchestral tones.</p>
+                        <button class="card-button" aria-label="View Details">View Details</button>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="card-image" style="background-image: url('nettspend.jpg');"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Midnight Groove</h3>
+                        <p class="card-description">A smooth and soulful beat perfect for late-night vibes.</p>
+                        <button class="card-button" aria-label="View Details">View Details</button>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="card-image" style="background-image: url('osamason\ \(12\).jpg');"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Elite Vibes</h3>
+                        <p class="card-description">A luxurious blend of modern beats and classic elements.</p>
+                        <button class="card-button" aria-label="View Details">View Details</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image" style="background-image: url('beat1.jpg');"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Dark Symphony</h3>
+                        <p class="card-description">An intense and atmospheric beat with deep basslines and orchestral tones.</p>
+                        <button class="card-button" aria-label="View Details">View Details</button>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="card-image" style="background-image: url('beat2.jpg');"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Midnight Groove</h3>
+                        <p class="card-description">A smooth and soulful beat perfect for late-night vibes.</p>
+                        <button class="card-button" aria-label="View Details">View Details</button>
+                    </div>
+                </div>
+        
+                <div class="card">
+                    <div class="card-image" style="background-image: url('beat3.jpg');"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Elite Vibes</h3>
+                        <p class="card-description">A luxurious blend of modern beats and classic elements.</p>
+                        <button class="card-button" aria-label="View Details">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-content">
+                <h2 class="about-title">About Me</h2>
+                <p class="about-text">
+                    Hi, I'm <span class="about-highlight">Your Name</span>, a passionate web developer with a knack for crafting visually stunning and high-performing websites. With expertise in modern technologies like <span class="about-highlight">JavaScript</span>, <span class="about-highlight">CSS</span>, and <span class="about-highlight">React</span>, I strive to deliver exceptional user experiences.
+                </p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-card scroll-animation" style="--progress: 90%;">
+                    <h3 class="skill-title">HTML</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill-card scroll-animation" style="--progress: 80%;">
+                    <h3 class="skill-title">CSS</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill-card scroll-animation" style="--progress: 70%;">
+                    <h3 class="skill-title">JavaScript</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+
+       
+
+
+
+
+  <!-- NEW COMPLEX SECTION: Interactive Beats Showcase -->
+  <section class="interactive-showcase">
+    <h2 class="section-title">Interactive Beats Showcase</h2>
+    <p class="showcase-description">Experience our exclusive beats in a whole new way! Interact with each beat and explore its unique features.</p>
+    <div class="beats-container">
+        <div class="beat-card" data-tilt>
+            <div class="beat-image" style="background-image: url('exclusive-beat1.jpg');"></div>
+            <div class="beat-info">
+                <h3 class="beat-title">The Vibe</h3>
+                <p class="beat-description">A deep and chill beat for those late-night sessions.</p>
+            </div>
+        </div>
+
+        <div class="beat-card" data-tilt>
+            <div class="beat-image" style="background-image: url('exclusive-beat2.jpg');"></div>
+            <div class="beat-info">
+                <h3 class="beat-title">Energy Rush</h3>
+                <p class="beat-description">High tempo beat with electrifying vibes.</p>
+            </div>
+        </div>
+
+        <div class="beat-card" data-tilt>
+            <div class="beat-image" style="background-image: url('exclusive-beat3.jpg');"></div>
+            <div class="beat-info">
+                <h3 class="beat-title">Deep Dive</h3>
+                <p class="beat-description">A sub-heavy beat that takes you on a journey.</p>
+            </div>
+        </div>
+    </div>
+    <button class="cta-button">Discover More Beats</button>
+</section>
+
+<script>
+    // Scroll and Parallax Animation for Interactive Showcase
+    const scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 800,
+        speedAsDuration: true
+    });
+
+    // Vanilla Tilt Effect for interactive tilt on beat cards
+    VanillaTilt.init(document.querySelectorAll(".beat-card"), {
+        max: 25,
+        speed: 400
+    });
+
+    // GSAP animation for hover effects on the beats showcase
+    const beatCards = document.querySelectorAll(".beat-card");
+    beatCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            gsap.to(card, { scale: 1.1, duration: 0.3 });
+        });
+        card.addEventListener('mouseleave', () => {
+            gsap.to(card, { scale: 1, duration: 0.3 });
+        });
+    });
+</script>
+
+
+
+
+
+
+        <script>
+            gsap.from(".parallax-title", { opacity: 0, y: -100, duration: 1 });
+            gsap.from(".parallax-description", { opacity: 0, y: 100, duration: 1 });
+
+            const controller = new ScrollMagic.Controller();
+            const parallaxScene = new ScrollMagic.Scene({
+                triggerElement: ".parallax-section",
+                triggerHook: 0.5,
+                duration: "100%"
+            })
+            .setTween(".parallax-bg", { y: "50%", ease: "none" })
+            .addTo(controller);
+        </script>
+
+        <script>
+            const burgerMenu = document.getElementById("burger-menu");
+            const navMenu = document.getElementById("nav-menu");
+
+            burgerMenu.addEventListener("click", () => {
+                navMenu.classList.toggle("show");
+            });
+        </script>
+
+
+
+
+<footer class="gothic-footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <h2>TripHoy Beats</h2>
+        </div>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Beats</a></li>
+                <li><a href="#">Lease</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="#" class="social-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 TripHoy Beats. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+<canvas id="bloodCanvas"></canvas>
+<div id="monster" class="monster"></div>
+
+
+<script>
+ // Настройка канваса
+const canvas = document.getElementById('bloodCanvas');
+const ctx = canvas.getContext('2d');
+const bloodSound = new Audio('https://freesound.org/data/previews/337/337049_5121236-lq.mp3'); // Звук капли крови
+const monster = document.getElementById('monster');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
+// Класс капли крови
+class BloodDrop {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.radius = Math.random() * 2 + 2;
+        this.speed = Math.random() * 2 + 1;
+        this.opacity = Math.random() * 0.8 + 0.2;
+        this.trail = [];
+    }
+
+    draw() {
+        this.trail.forEach((pos, i) => {
+            ctx.beginPath();
+            ctx.arc(pos.x, pos.y, this.radius * (1 - i / this.trail.length), 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 0, 0, ${this.opacity * (1 - i / this.trail.length)})`;
+            ctx.fill();
+            ctx.closePath();
+        });
+
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 0, 0, ${this.opacity})`;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    update() {
+        this.trail.unshift({ x: this.x, y: this.y });
+        if (this.trail.length > 10) this.trail.pop();
+
+        this.y += this.speed;
+        this.radius *= 0.98;
+
+        if (this.radius < 0.5) {
+            bloodSound.currentTime = 0;
+            bloodSound.play();
+            this.reset();
+        }
+    }
+
+    reset() {
+        this.y = Math.random() * -100;
+        this.x = Math.random() < 0.5 ? Math.random() * 50 : canvas.width - Math.random() * 50;
+        this.radius = Math.random() * 2 + 2;
+        this.speed = Math.random() * 2 + 1;
+        this.opacity = Math.random() * 0.8 + 0.2;
+        this.trail = [];
+    }
+}
+
+// Создание капель крови
+const bloodDrops = [];
+const dropCount = 100;
+
+for (let i = 0; i < dropCount; i++) {
+    const x = Math.random() < 0.5 ? Math.random() * 50 : canvas.width - Math.random() * 50;
+    const y = Math.random() * canvas.height;
+    bloodDrops.push(new BloodDrop(x, y));
+}
+
+// Анимация
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    bloodDrops.forEach(drop => {
+        drop.update();
+        drop.draw();
+    });
+
+    requestAnimationFrame(animate);
+}
+
+// Появление монстра
+function spawnMonster() {
+    monster.classList.add('active');
+    setTimeout(() => {
+        monster.classList.remove('active');
+    }, 5000);
+}
+
+// Событие на скролл
+window.addEventListener('scroll', () => {
+    if (Math.random() < 0.05) spawnMonster();
+});
+
+animate();
+
+</script>
+
+
+    </div>
+</body>
+</html>
